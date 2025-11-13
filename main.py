@@ -94,7 +94,7 @@ def search_books(library_books) :
            
            print(book["id"], "-", book["title"], "-", book["author"], "-", book["genre"])
            found = True #making found true lets the system know that the book is available
-           starttheprogram(library_books)
+    starttheprogram(library_books)
 
     if found == False :
         print("Book not found.") #if the book is assigned found = false, it wont print it. 
@@ -133,7 +133,7 @@ def return_book(library_books) :
             print(book["id"], "-", book["title"], "-", book["author"], "-", book["genre"],"-", book["available"], "-", book["due_date"], "-", book["checkouts"])
             starttheprogram(library_books)
             for book in library_books :
-                if book["due date"] > datetime.now() :
+                if book["due_date"] > datetime.now() :
                     print("Additionally, the following books are due.")
                     print(book["id"], "-", book["title"], "-", book["author"], "-", book["genre"],"-", book["available"], "-", book["due_date"], "-", book["checkouts"])
         else :
